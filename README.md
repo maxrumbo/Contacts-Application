@@ -1,56 +1,30 @@
-# Contacts App
+# Contacts Application
 
-app to manage a contact list using React (class components) and Vite.
+![Contacts Dashboard](public/images/dashboard.png) 
 
-## Description
-
-Contacts App helps users to:
-
-- View the initial contact list.
-- Add new contacts (name and tag).
-- Delete contacts.
-- Switch contact list view mode (Comfortable / Compact).
-- Automatically save contacts to browser localStorage.
+A lightweight and responsive contact management web application built with **React** (Class Components) and **Vite**.
 
 ## Key Features
-
-- Add-contact form with required field validation.
-- Dynamic state-driven contact list.
-- Delete button on each contact item.
-- Empty state when there are no contacts.
-- View modes:
-	- Comfortable (`comfortable`)
-	- Compact (`compact`)
-- Local data persistence using key:
-	- `contacts-app-data`
+* **Full CRUD Operations:** Seamlessly add new contacts (with profile pictures) or delete existing ones.
+* **Dynamic View Modes:** Toggle between **Default** and **Detail** layouts to suit your visual preference.
+* **Data Persistence:** Automatically saves and syncs your contact list to the browser's `localStorage` (no database required).
+* **Form Validation:** Prevents empty or invalid contact submissions.
 
 ## Tech Stack
+* **Framework:** React 18 & Vite 4
+* **Language:** JavaScript (ES Modules)
+* **Styling:** Standard CSS
 
-- React 18
-- Vite 4
-- JavaScript (ES Modules)
-- Custom CSS
+## Quick Start
+Make sure you have [Node.js](https://nodejs.org/) installed, then run the following commands:
 
-## Requirements
+1. **Install dependencies:**
+   ```bash
+   npm install
 
-Make sure you have installed:
-
-- Node.js (LTS version recommended)
-- npm
-
-## How To Run The Project
-
-1. Install dependencies:
-
-```bash
-npm install
-```
-
-2. Run development mode:
-
-```bash
-npm run dev
-```
+2. **Run development mode:**
+	```bash
+	npm run dev
 
 3. Open the local URL shown in the terminal (usually `http://localhost:5173`).
 
@@ -59,49 +33,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-The build output will be generated in the `dist` folder.
-
-To preview the production build:
-
-```bash
-npm run preview
-```
-
-## Folder Structure
-
-```text
-.
-|- public/
-|  \- images/
-|- src/
-|  |- components/
-|  |  |- ContactApp.jsx
-|  |  |- ContactInput.jsx
-|  |  |- ContactItem.jsx
-|  |  |- ContactItemBody.jsx
-|  |  |- ContactItemImage.jsx
-|  |  |- ContactList.jsx
-|  |  \- DeleteButton.jsx
-|  |- styles/
-|  |  \- style.css
-|  |- utils/
-|  |  \- data.js
-|  \- index.jsx
-|- index.html
-|- package.json
-|- vite.config.js
-\- README.md
-```
-
-## Data Flow (Short)
-
-1. Initial data is loaded from `src/utils/data.js`.
-2. When the app starts, it checks data in localStorage.
-3. If localStorage is empty/invalid, the app uses the initial data.
-4. Every contact update (add/delete) is automatically saved back to localStorage.
-
-## Notes
-
-- All data is stored locally in the user's browser.
-- Data will be lost if localStorage is cleared.

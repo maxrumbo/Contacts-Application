@@ -78,8 +78,7 @@ class ContactApp extends React.Component {
     return (
       <div className="contact-app">
         <header className="contact-app__header">
-          <h1>Aplikasi Kontak</h1>
-          <p className="contact-app__subtitle">Kelola relasi pentingmu dalam satu tempat.</p>
+          <h1>Kontak Anda</h1>
           <span className="contact-app__count" aria-live="polite">
             {totalContacts} kontak
           </span>
@@ -100,7 +99,7 @@ class ContactApp extends React.Component {
                 aria-pressed={viewMode === 'comfortable'}
                 onClick={() => this.onViewModeChangeHandler('comfortable')}
               >
-                Nyaman
+                Default
               </button>
               <button
                 type="button"
@@ -108,7 +107,7 @@ class ContactApp extends React.Component {
                 aria-pressed={viewMode === 'compact'}
                 onClick={() => this.onViewModeChangeHandler('compact')}
               >
-                Ringkas
+                Detail
               </button>
             </div>
           </div>
